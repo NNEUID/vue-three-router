@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style>
-.jobs h2 {
+.job h2 {
 background: #f4f4f4;
 padding: 20px;
 border-radius: 10px;
