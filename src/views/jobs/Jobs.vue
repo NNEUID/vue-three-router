@@ -12,25 +12,26 @@ export default {
   data() {
     return {
       jobs: [
-        { title: 'UX Designer at Open HI', id: 1, description: 'Lorem' },
-        { title: 'Frontend Developer at Preggy Health', id: 2, description: 'Lorem' },
-        { title: 'DevOps Engineer at Colorbrace LLC', id: 3, description: 'Lorem' },
+
       ]
     }
 
+  },
+  mounted() {
+    fetch('http://localhost:3000/jobs').then(res => res.json()).then(data => this.jobs = data).catch(error => console.log(error))
   }
 }
 </script>
 
 <style>
 .job h2 {
-background: #f4f4f4;
-padding: 20px;
-border-radius: 10px;
-margin: 10px auto;
-max-width: 600px;
-cursor: pointer;
-color: #444;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 600px;
+  cursor: pointer;
+  color: #444;
 }
 
 .job h2:hover {
